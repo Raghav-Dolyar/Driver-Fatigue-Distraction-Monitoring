@@ -13,13 +13,13 @@ import face_recognition
 import os
 
 # ------------------ Cloud Service Credentials ------------------
-PUSHOVER_USER_KEY = "uq6oortiezaz5rosym6g7tt19z7hq7"
-PUSHOVER_API_TOKEN = "a85fe75dsawtnncqwursg289y5z25f"
+PUSHOVER_USER_KEY = os.getenv("PUSHOVER_USER_KEY")
+PUSHOVER_API_TOKEN = os.getenv("PUSHOVER_API_TOKEN")
 
-TWILIO_ACCOUNT_SID = "ACa6ac7e61dc6be192fc7b0a77b91207d1"
-TWILIO_AUTH_TOKEN = "42ccfcd29e0b1a57a25016b1ce028cdc"
-TWILIO_PHONE_NUMBER = "+18145272077"
-EMERGENCY_CONTACT_NUMBER = "+918643078304"
+TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
+EMERGENCY_CONTACT_NUMBER = os.getenv("EMERGENCY_CONTACT_NUMBER")
 
 # ------------------ Initialize Cloud Clients ------------------
 pushover_client = PushoverClient(PUSHOVER_USER_KEY, api_token=PUSHOVER_API_TOKEN)
